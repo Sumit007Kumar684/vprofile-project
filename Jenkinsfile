@@ -69,12 +69,12 @@ pipeline {
                     nexusVersion: 'nexus3',
                     protocol: 'http',
                     nexusUrl: "${NEXUSIP}:${NEXUSPORT}",
-                    groupId: 'QA',
+                    groupId: 'Devops',
                     version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                     repository: "${RELEASE_REPO}",
                     credentialsId: "${NEXUSLOGIN}",  // fixed variable
                     artifacts: [[
-                        artifactId: 'vproapp',
+                        artifactId: 'Sumit-App',
                         classifier: '',
                         file: 'target/vprofile-v2.war',
                         type: 'war'
